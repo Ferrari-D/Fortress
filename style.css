@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: #474544;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  text-align: center;
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+	line-height: 150%;
+	height: 150px;
+	resize: none;
+  width: 100%;
+}
+
+select {
+  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tele'],
+select,
+textarea {
+  padding: 5px;
+	width: 100%;
+	background: none;
+  border: none;
+	border-bottom: solid 2px #474544;
+	color: #474544;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+	transition: all 0.3s;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* About Section Start */
+#about {
+  display: flex;
+  align-items: center;
+  background-image: url(img/tools.jpeg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+
+#about::after {
+  content:'';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: .7;
+  z-index: -1;
+}
+
+#about .about {
+  display: flex;
+  flex-direction: column;
+}
+
+#about h1 {
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  position: relative;
+  color:transparent;
+  animation: text_reveal .5s ease forwards;
+  animation-delay: 1.5s;
+  text-align: left;
+}
+
+#about p {
+  color: white;
+  font-size: 18px;
+}
+
+#about h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color:#0a2463;
+  animation: text_reveal_box 1s ease;
+  animation-delay: 1s;
+}
+
+#about .cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  color:#FED766;
+  background-color: transparent;
+  border: 2px solid #FED766;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  margin-top: 30px;
+  transition: .3s ease;
+}
+
+#about .cta-yellow {
+  color:#FED766;
+  border: 2px solid #FED766;
+}
+
+#about .cta-blue {
+  color:#5c82dc;
+  border: 2px solid #5c82dc;
+}
+
+#about .cta-white {
+  color:#FFF;
+  border: 2px solid #FFF;
+}
+
+#about .cta-yellow:hover {
+  color: #1d1d1d;
+  background-color: #FED766;
+}
+
+#about .cta-blue:hover {
+  color: #FFF;
+  background-color: #5c82dc;
+}
+
+#about .cta-white:hover {
+  color: #1d1d1d;
+  background-color: #FFF;
+}
+
+#about .container {
+  align-items: start;
+}
+
+/* Servives Section Start */
+#services .services {
+  flex-direction: column;
+  text-align: center;
+  background-color:#FED766;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+#services .section-title span {
+  color: blue;
+}
+
+#services .service-top p {
+  line-height: 1.5rem;
+  font-weight: 300;
+  letter-spacing: .05rem;
+}
+
+#services .service-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#services .service-item {
+  flex-basis: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  background-image:url(img/plank.jpg) ;
+  background-size: cover;
+}
+
+/* Info Section Start*/
+#info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #064789;
+}
+
+#info .container {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#info h2 {
+  color: #fff;
+}
+
+#info h1 span {
+  color: #F2F3EB;
+}
+
+.info-wrap {
+  width: 100%;
+  display: flex;
+}
+
+.col-left, .col-right {
+  display: flex;
+  width: 50%
+}
+
+.col-left {
+  justify-content: flex-end;
+}
+
+.col-right {
+  width: 100%;
+}
+
+.col-right p {
+  padding-left: 2rem;
+  color: white;
+}
+
+/* Contact Section Start */
+.contact {
+  flex-direction: column;
+}
+
+.underline {
+  border-bottom: solid 2px #474544;
+  margin: -0.512em auto;
+  width: 80px;
+}
+
+.icon_wrapper {
+  margin: 50px auto 0;
+  width: 100%;
+}
+
+.icon {
+  display: block;
+  fill: #474544;
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+::-webkit-input-placeholder {
+	color: #474544;
+}
+
+:-moz-placeholder { 
+	color: #474544;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: #474544;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #474544;
+}
+
+form {
+  border: solid 3px #474544;
+  width: 100%;
+  padding: 35px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  color: #5c82dc;
+  background-color: transparent;
+  border: 2px solid #5c82dc;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 30px;
+  transition: .3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #5c82dc;
+  color: #F2F3EB;
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
+/*Contact Section End * /
+/* Keyframes */
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left:100%;
+  }
+}
+
+@keyframes text_reveal {
+  100% {
+    color: white;
+
+  }
+}
+
+
+/* Keyframes End */
